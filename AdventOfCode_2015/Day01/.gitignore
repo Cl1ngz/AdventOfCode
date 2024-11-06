@@ -7,3 +7,5 @@
 # Ignore Cargo.lock if it's a library (Cargo will create it automatically)
 Cargo.lock
 
+**/out
+**/*.idea
