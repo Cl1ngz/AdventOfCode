@@ -9,32 +9,28 @@ public class Part2 {
     public static void main(String[] args) {
         String filepath = "../input.txt";
         Set<String> houses = new HashSet<>();
-        int santaX = 0, santaY = 0;
-        int roboX = 0, roboY = 0;
-        houses.add(santaX + "," + santaY);
+        int suppliers = 2; // about of helpers for scalability
+        int[][] positions = new int[suppliers][2];
+
+
+        // starting positions everyone starts at the same place
+        for (int i = 0; i < suppliers; i++) {
+            houses.add(positions[i][0] + "," + positions[i][1]);
+        }
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
             int direction;
-            boolean turn=true;
+            int turn = 0;
             while ((direction = reader.read()) != -1) {
-                if(turn){
-                    switch ((char) direction) {
-                        case '>' -> santaX++;
-                        case '^' -> santaY++;
-                        case '<' -> santaX--;
-                        case 'v' -> santaY--;
-                    }
-                    houses.add(santaX + "," + santaY);
-                }else {
-                    switch ((char) direction) {
-                        case '>' -> roboX++;
-                        case '^' -> roboY++;
-                        case '<' -> roboX--;
-                        case 'v' -> roboY--;
-                    }
-                    houses.add(roboX + "," + roboY);
+                int currentHelper = turn % suppliers; // track which helper is currently delivering the presents
+                switch ((char) direction) {
+                    case '>' -> positions[currentHelper][0]++;
+                    case '^' -> positions[currentHelper][1]++;
+                    case '<' -> positions[currentHelper][0]--;
+                    case 'v' -> positions[currentHelper][1]--;
                 }
-                turn=!turn;
+                houses.add(positions[currentHelper][0] + "," + positions[currentHelper][1]);
+                turn++;
             }
             System.out.println(houses.size());
         } catch (IOException e) {
