@@ -46,6 +46,7 @@ You can find the Rust and Java solution for each part of this challenge:
 
 - **Java Part 1**: [`Part1.java`](java/Part1.java)
 - **Java Part 2**: [`Part2.java`](java/Part2.java)
+- **Helper Class for part 1 and 2**: [`InstructionResult.java`](java/InstructionResult.java)
 
 ---
 
