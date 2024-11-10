@@ -1,17 +1,30 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 
 public class Part2 {
     public static void main(String[] args) {
-        String filepath = "../input.txt";
+        String secret_key = "ckczppom";
 
-
-        try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
-
-        } catch (IOException e) {
-            System.err.println("Error reading the input file: " + e.getMessage());
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            int number = 1;
+            while (true) {
+                String input = secret_key + number;
+                byte[] hashBytes = md.digest(input.getBytes()); // MD5 Hash
+                if (startsWithFiveZeros(hashBytes)) {
+                    System.out.println(number);
+                    break;
+                }
+                number++;
+            }
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
         }
     }
+
+    private static boolean startsWithFiveZeros(byte[] hashBytes) {
+        return (hashBytes[0] == 0) && (hashBytes[1] == 0) && ((hashBytes[2]) == 0);
+    }
+
 }
