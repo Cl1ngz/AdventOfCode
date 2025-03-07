@@ -13,10 +13,10 @@ To view each solution in detail, click on the respective day below. Each link wi
 - [x] [Day 02](./Day02/README.md)
 - [x] [Day 03](./Day03/README.md)
 - [x] [Day 04](./Day04/README.md)
-- [ ] [Day 05](./Day05/README.md)
-- [ ] [Day 06](./Day06/README.md)
-- [ ] [Day 07](./Day07/README.md)
-- [ ] [Day 08](./Day08/README.md)
+- [x] [Day 05](./Day05/README.md)
+- [x] [Day 06](./Day06/README.md)
+- [x] [Day 07](./Day07/README.md)
+- [x] [Day 08](./Day08/README.md)
 - [ ] [Day 09](./Day09/README.md)
 - [ ] [Day 10](./Day10/README.md)
 - [ ] [Day 11](./Day11/README.md)
@@ -40,12 +40,14 @@ To view each solution in detail, click on the respective day below. Each link wi
 ### Project Structure
 
 Each day's solution folder (`Day01`, `Day02`, etc.) contains:
+
 - **README.md**: Detailed explanation and approach for the day's challenge.
 - **Solution Code**: Code written in Rust, with Java and C versions to come.
 
 ### Future Plans
 
 I plan to add:
+
 - **Java and C Implementations** for each day.
 
 ---
