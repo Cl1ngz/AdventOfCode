@@ -17,7 +17,7 @@ To view each solution in detail, click on the respective day below. Each link wi
 - [x] [Day 06](./Day06/README.md)
 - [x] [Day 07](./Day07/README.md)
 - [x] [Day 08](./Day08/README.md)
-- [ ] [Day 09](./Day09/README.md)
+- [x] [Day 09](./Day09/README.md)
 - [ ] [Day 10](./Day10/README.md)
 - [ ] [Day 11](./Day11/README.md)
 - [ ] [Day 12](./Day12/README.md)
