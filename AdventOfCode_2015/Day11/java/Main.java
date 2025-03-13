@@ -1,23 +1,20 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
 
-public class Part1 {
+public class Main {
     public static void main(String[] args) {
-        // 8 lowercase
-        //incrementing old until it valid
-        // if it was z -> its now a
-        // must include one increasing straight of at least three letters, like abc, bcd, cde, and so on, up to xyz. They cannot skip letters; abd doesn't count.
-        //  not contain the letters i, o, or l
-        //  contain at least two different, non-overlapping pairs of letters, like aa, bb, or zz.
-
         String input = "vzbxkghb";
-        String newPass = incrementUntilValid(input);
 
+        System.out.println("Part 1");
+        String newPass = incrementUntilValid(input);
         System.out.println("New pass: " + newPass);
+        System.out.println("-".repeat(20));
+
+        System.out.println("Part 2");
+        String newPassAgain = incrementUntilValid(increment(newPass));
+        System.out.println("New pass again: " + newPassAgain);
+        System.out.println("-".repeat(20));
     }
 
     private static String incrementUntilValid(String s) {
