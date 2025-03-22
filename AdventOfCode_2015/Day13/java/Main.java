@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.*;
 
 
-public class Part1 {
+public class Main {
     public static void main(String[] args) {
         String filepath = "../input.txt";
         Map<String, Map<String, Integer>> happiness = new HashMap<>();
@@ -25,7 +25,23 @@ public class Part1 {
         }
 
         long maxHappiness = getMaxHappiness(happiness);
-        System.out.println("Maximum total happiness: " + maxHappiness);
+        System.out.println("Part 1: " + maxHappiness);
+
+        addSelf(happiness, "Cl1ngz");
+        maxHappiness = getMaxHappiness(happiness);
+        System.out.println("Part 2: " + maxHappiness);
+
+    }
+
+    private static void addSelf(Map<String, Map<String, Integer>> happiness, String self) {
+        for (String person : happiness.keySet()) {
+            happiness.get(person).put(self, 0);
+        }
+        Map<String, Integer> selfMap = new HashMap<>();
+        for (String person : happiness.keySet()) {
+            selfMap.put(person, 0);
+        }
+        happiness.put(self, selfMap);
     }
 
     static long getMaxHappiness(Map<String, Map<String, Integer>> happiness) {

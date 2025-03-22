@@ -37,6 +37,6 @@ class Part1Test {
 
 
         // Assert that the maximum total happiness is 330.
-        assertEquals(330, Part1.getMaxHappiness(happiness));
+        assertEquals(330, Main.getMaxHappiness(happiness));
     }
 }
