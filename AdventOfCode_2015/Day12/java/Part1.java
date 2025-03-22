@@ -1,5 +1,3 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -17,16 +15,14 @@ public class Part1 {
             Matcher matcher = pattern.matcher(content);
 
             int sum = 0;
-
             while (matcher.find()) {
                 sum += Integer.parseInt(matcher.group());
             }
+
             System.out.println("Sum: " + sum);
 
         } catch (IOException e) {
             System.err.println("Error reading the input file: " + e.getMessage());
         }
-
-
     }
 }
