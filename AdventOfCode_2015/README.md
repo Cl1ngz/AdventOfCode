@@ -1,7 +1,7 @@
 # Advent of Code 2015
 
 Welcome to my solutions for the **Advent of Code 2015** challenges!  
-Each day's challenge has been solved in **Rust**, with future implementations planned in **Java** and **C**.
+Each day's challenge has been solved in **Java**, with future implementations planned in **Rust**.
 
 ### Usage
 
@@ -42,13 +42,13 @@ To view each solution in detail, click on the respective day below. Each link wi
 Each day's solution folder (`Day01`, `Day02`, etc.) contains:
 
 - **README.md**: Detailed explanation and approach for the day's challenge.
-- **Solution Code**: Code written in Rust, with Java and C versions to come.
+- **Solution Code**: Code written in Java, with Rust versions to come.
 
 ### Future Plans
 
 I plan to add:
 
-- **Java and C Implementations** for each day.
+- **Rust Implementations** for each day.
 
 ---
 
